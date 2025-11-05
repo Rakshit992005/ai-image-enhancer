@@ -10,8 +10,8 @@ const App = () => {
         </h1>
 
         <p className='text-lg text-gray-500 '>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt rerum id maiores earum laborum 
-        </p>
+          AI That Turns Blurry Into Brilliant
+          </p>
       </div>
 
       <Home></Home>

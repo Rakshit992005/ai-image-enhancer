@@ -2,6 +2,7 @@ import  { useState } from 'react'
 import ImagePreview from './ImagePreview'
 import ImageUpload from './ImageUpload'
 import { ApiCalling } from '../services/ApiCalling';
+import DownloadImage from './DownloadImage';
 
 const Home = () => {
   const [uploadImage, setUploadImage] = useState(null);
@@ -17,8 +18,7 @@ const Home = () => {
       setEnhancedImage(enhancedURL?.image);
       setLoading(false);
     }catch (error){
-        console.log(error);
-        alert("Error while enhancing the image. Please try again later");
+        alert("Error while enhancing the image. Please try again later: " , error);
     }
 
   }
@@ -34,7 +34,7 @@ const Home = () => {
         uploaded={uploadImage}
         enhanced={enhancedImage}
         />
-      
+      <DownloadImage url={enhancedImage} />
 
     </div>
   )
