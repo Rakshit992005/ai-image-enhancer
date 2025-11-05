@@ -29,7 +29,7 @@ const ImagePreview = (props) => {
         </h1>
 
         {props.enhanced && !props.loading &&(
-          <img src="" alt="" className="w-full h-full object-cover" />
+          <img src={props.enhanced} alt="" className="w-full h-full object-cover" />
         ) 
         }
         {props.loading ? <Loading /> :(
@@ -44,3 +44,7 @@ const ImagePreview = (props) => {
 };
 
 export default ImagePreview;
+
+
+
+// "https://wxtechhk.oss-cn-hongkong.aliyuncs.com/tasks/output/scale/3f413c1e-2027-43cd-866b-5a2e83017944.jpg?x-oss-credential=LTAI5tGjJnh66c1txANiRBQN/20251105/cn-hongkong/oss/aliyun_v4_request&x-oss-date=20251105T101037Z&x-oss-expires=3600&x-oss-signature=fe6e024d981974126322e990d26298565eb43779dc4602d375d5da8102977c1f&x-oss-signature-version=OSS4-HMAC-SHA256"

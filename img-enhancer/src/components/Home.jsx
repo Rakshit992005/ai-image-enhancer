@@ -14,7 +14,7 @@ const Home = () => {
     //calling api 
     try{
       const enhancedURL = await ApiCalling(file);
-      setEnhancedImage(enhancedURL);
+      setEnhancedImage(enhancedURL?.image);
       setLoading(false);
     }catch (error){
         console.log(error);
@@ -34,7 +34,7 @@ const Home = () => {
         uploaded={uploadImage}
         enhanced={enhancedImage}
         />
-
+      
 
     </div>
   )
